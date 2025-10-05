@@ -20,7 +20,7 @@ vector<int> spiralOrder(vector<vector<int>>& mat) {
             ans.push_back(mat[i][enCol]);
           }
           enCol--;
-          
+
           if (stRow <= enRow) {
             for (int i = enCol; i >= stCol; i--)
                 ans.push_back(mat[enRow][i]);
@@ -47,7 +47,7 @@ int main(){
 };
     vector<int> output = spiralOrder(numbers);
     for(int num : output){
-        cout<<num;
+        cout<<num<<endl;
     }
     system("pause");
 }
