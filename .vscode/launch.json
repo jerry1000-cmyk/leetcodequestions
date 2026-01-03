@@ -2,31 +2,25 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "C/C++: g++.exe build and debug active file",
+            "name": "C++ Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "program": "${workspaceFolder}/hello.exe",
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
             "externalConsole": true,
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
             "MIMode": "gdb",
-            "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe", // <-- 🔴 IMPORTANT: Update this path!
+            "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
-                },
-                {
-                    "description": "Set Disassembly Flavor to Intel",
-                    "text": "-gdb-set disassembly-flavor intel",
-                    "ignoreFailures": true
                 }
             ],
-            // This is the link to the task in tasks.json
-            "preLaunchTask": "C/C++: g++.exe build active file" 
+            "preLaunchTask": "build cpp"
         }
     ]
 }
